@@ -149,3 +149,11 @@ footer p {
     color: #f4a261; 
     font-size: 0.85rem;
 }
+
+header { 
+    display: block;
+}
+
+a:hover { 
+    opacity: 0.8; 
+}
