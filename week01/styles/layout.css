@@ -32,15 +32,16 @@ h1 {
     color: rgb(229, 219, 238);
 }
 
-header, footer {
-    grid-column: 1 / -1; 
+header,
+footer {
+    grid-column: 1 / -1;
 }
 
 main {
     background-color: rgb(214, 191, 235);
 }
 
-aside{
+aside {
     background-color: rgb(224, 216, 231);
 }
 
@@ -52,7 +53,8 @@ footer {
     color: rgb(229, 219, 238);
 }
 
-main, aside {
+main,
+aside {
     padding: 1rem;
     min-height: 18rem;
 }

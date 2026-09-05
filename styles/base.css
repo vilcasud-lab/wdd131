@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#course-title {
+    display: block; 
+    background-color: rgb(95, 67, 124);
+    padding: 2rem;
+    text-align: center;
+    color: rgb(229, 219, 238);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(53, 24, 82);
+    padding: 1rem;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(229, 219, 238);
+}
+
+/* Configuración del contenedor principal */
+main {
+    background-color: rgb(214, 191, 235);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 2rem;                     /* Espacio entre las dos tarjetas */
+}
+
+/* Título principal centrado sobre o dentro de las columnas */
+main h1 {
+    grid-column: 1 / -1;           /* Ocupa todo el ancho superior */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Estilos del contenedor de la tarjeta */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Corta las esquinas superiores del h2 para que sigan el border-radius */
+    padding: 0 1.5rem 1.5rem 1.5rem; /* Sin padding arriba (0) para que el h2 pegue arriba */
+}
+
+/* Encabezado principal de cada tarjeta */
+.card > h2:first-child {
+    background-color: #450868;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.75rem 1rem;      /* El padding va dentro del h2 para darle altura */
+    margin: 0 -1.5rem 1.5rem -1.5rem; /* Margen negativo para estirarse de borde a borde */
+    font-size: 1.2rem;
+}
+
+
+
+.card img {
+    float: right;
+    margin-left: 1rem;   
+    margin-bottom: 1rem; 
+    max-width: 150px;     
+    height: auto;
+}
+
+.card h2 {
+    clear: both;
+}
+
+.flag-arequipa {
+    float: left;
+    margin: 0 0 1rem 1rem;
+    width: 150px;
+    border-radius: 4px;   
+}
+
+/* Título de la sección de la ciudad (Arequipa, Peru) */
+.card h3, 
+.card h2.subtitle {
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 0.5rem;        
+    margin-top: 1.5rem;            
+    margin-bottom: 1rem;           
+    text-align: center;            
+    clear: both;                  
+}
+
+/* Flotar la bandera a la izquierda dentro de la tarjeta */
+.flag-box {
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Centra el texto 'Official Flag...' respecto a la bandera */
+    width: 140px;       /* Ancho fijo para la caja de la bandera */
+}
+
+.flag-box img {
+    width: 100%;        
+    border: 1px solid #ccc;
+}
+
+.flag-box figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Empujar la lista al centro vertical de la tarjeta */
+.card ul {
+    margin-top: auto;     
+    margin-bottom: auto;   
+    padding-left: 2rem;    
+}
+
+footer {
+    background-color: #4b3650; 
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+
+#lastModified {
+    color: #f4a261; 
+    font-size: 0.85rem;
+}
