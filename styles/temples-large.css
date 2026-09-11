@@ -1,0 +1,33 @@
+@media (min-width: 640px) {
+    #menu {
+        display: none;
+        /* Oculta el botón hamburguesa */
+    }
+
+    header {
+        flex-direction: row;
+    }
+
+    .navigation {
+        display: flex;
+        /* Muestra el menú horizontal */
+        position: static;
+        flex-direction: row;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+    }
+
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas en desktop */
+        max-width: 900px;
+    }
+
+    figure {
+        max-width: 100%;
+    }
+}

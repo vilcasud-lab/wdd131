@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | WDD 131</title>
+    <meta name="description" content="A responsive temple album page displaying various LDS temples.">
+    <meta name="author" content="Alex Gilbert Vilca Fernandez">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Slabo+13px&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Toggle Menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+        <div class="res-grid">
+            <figure>
+                <img src="images/arequipa_peru_temple.webp" alt="Arequipa Peru Temple" loading="lazy">
+                <figcaption>Arequipa Peru Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima_peru_los_olivos_temple_exterior.jpeg" alt="Lima Peru Los Olivos Temple"
+                    loading="lazy">
+                <figcaption>Lima Peru Los Olivos Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima_peru_temple_lds.jpeg" alt="Lima Peru Temple" loading="lazy">
+                <figcaption>Lima Peru Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/cochabamba_bolivia_temple_lds.jpeg" alt="Cochabamba Bolivia Temple" loading="lazy">
+                <figcaption>Cochabamba Bolivia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/trujillo_peru_temple_exterior.jpeg" alt="Trujillo Peru Temple" loading="lazy">
+                <figcaption>Trujillo Peru Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/barranquilla_columbia_temple_exterior.jpeg" alt="Barranquilla Colombia Temple"
+                    loading="lazy">
+                <figcaption>Barranquilla Colombia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/quito_ecuador_temple.jpeg" alt="Quito Ecuador Temple" loading="lazy">
+                <figcaption>Quito Ecuador Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bogota_colombia_temple_lds.jpeg" alt="Bogota Colombia Temple" loading="lazy">
+                <figcaption>Bogota Colombia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/guayaquil_ecuador_temple_lds.jpeg" alt="Guayaquil Ecuador Temple" loading="lazy">
+                <figcaption>Guayaquil Ecuador Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> 💥 Alex Gilbert 🍔 Arequipa, Peru 😎</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
