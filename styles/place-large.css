@@ -1,0 +1,49 @@
+@media screen and (min-width: 800px) {
+
+    .hero {
+        position: relative;
+        width: 100%;
+    }
+
+    .hero picture,
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .data {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 280px;
+        margin: 0;
+        background-color: var(--bg-card, rgba(255, 255, 255, 0.85));
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .weather {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 280px;
+        margin: 0;
+        background-color: var(--bg-card, rgba(255, 255, 255, 0.85));
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .weather img {
+        width: 48px;
+        height: auto;
+        display: block;
+        margin: 0.5rem auto;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+}

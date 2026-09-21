@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #9c1261;
+    --secondary-color: #9e8a18;
+    --text-color: #222222;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --heading-font: "Slabo 13px", serif;
+    --body-font: "Quicksand", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+#city-title {
+    display: block;
+    background-color: rgba(196, 18, 128, 0.932);
+    padding: 2rem;
+    text-align: center;
+    color: rgb(245, 243, 247);
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Contenedor Hero */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tarjetas (Data y Weather) en móvil */
+.data,
+.weather {
+    background-color: var(--bg-card);
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.data h2,
+.weather h2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75rem 1rem;
+    font-size: 1.3rem;
+}
+
+.data ul,
+.weather ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+.data li,
+.weather li {
+    margin-bottom: 0.5rem;
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}

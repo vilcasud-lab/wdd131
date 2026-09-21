@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arequipa, Peru - WDD 131</title>
+    <meta name="description" content="General description and weather information for Arequipa city.">
+    <meta name="author" content="Alex Gilbert Vilca Fernandez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Slabo+13px&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span id="city-title">Arequipa</span>
+    </header>
+
+    <main class="hero">
+        <picture>
+            <source srcset="images/arequipa-large.webp" media="(min-width: 1000px)">
+            <source srcset="images/arequipa-medium.webp" media="(min-width: 500px)">
+            <img src="images/arequipa-small.webp" alt="Arequipa Peru city view" width="500" height="250">
+        </picture>
+
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 63,345 sq km</li>
+                <li><strong>Population:</strong> 1,080,600</li>
+                <li><strong>Capital:</strong> Arequipa</li>
+                <li><strong>Languages:</strong> Spanish, Quechua</li>
+                <li><strong>Currency:</strong> Sol (PEN)</li>
+                <li><strong>Time Zone:</strong> UTC-5</li>
+                <li><strong>Calling Code:</strong> +51 (054)</li>
+                <li><strong>Internet TLD:</strong> .pe</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <!-- <img src="images/weather.svg" alt="Weather icon" class="weather-icon"> -->
+            <ul>
+                <li><strong>Temperature:</strong> 20 °C</li>
+                <li><strong>Conditions:</strong> Mostly Sunny</li>
+                <li><strong>Wind:</strong> 13 km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="chill">N/A</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> | Alex Gilbert | Arequipa, Peru</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
