@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2 {
+    font-family: 'Slabo 13px', serif;
+}
+
+header {
+    background-color: #5c314f;
+    color: white;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#menu {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation {
+    list-style: none;
+    display: none;
+    /* Oculto por defecto en móvil */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #5c314f;
+    z-index: 10;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    display: block;
+}
+
+.navigation a:hover {
+    background-color: #3d2250;
+}
+
+/* Main content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    flex: 1;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid de Templos (1 columna en móvil) */
+.res-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+}
+
+figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    color: #333;
+}
+
+/* Asegura que todas las imágenes tengan la misma altura dentro de la tarjeta */
+.res-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* Mantiene la proporción sin deformar la imagen */
+    border-radius: 4px;
+    margin-top: 0.75rem;
+}
+
+/* Footer */
+footer {
+    background-color: #5c314f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}

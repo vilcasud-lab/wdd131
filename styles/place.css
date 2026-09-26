@@ -2,7 +2,7 @@
     --primary-color: #9c1261;
     --secondary-color: #9e8a18;
     --text-color: #222222;
-    --bg-card: rgba(255, 255, 255, 0.9);
+    --bg-card: white;
     --heading-font: "Slabo 13px", serif;
     --body-font: "Quicksand", sans-serif;
 }
@@ -31,7 +31,14 @@ body {
     font-family: "Quicksand", sans-serif;
 }
 
-/* Contenedor Hero */
+/* h1 {
+    font-size: 3.5rem; 
+    text-align: center;
+    padding: 1.5rem;
+    background-color: (var(--primary-color));
+} */
+
+
 .hero {
     position: relative;
     width: 100%;
