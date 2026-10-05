@@ -1,0 +1,182 @@
+:root {
+    --primary-color: #3f1032;
+    --secondary-color: #5c1d4a;
+    --accent-color: #e3a857;
+    --bg-color: #f8f9fa;
+    --text-color: #222;
+    --border-color: #ccc;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos del Formulario */
+form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.optional {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Pseudo-clases validación visual */
+input:required,
+select:required {
+    border-left: 4px solid var(--secondary-color);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(92, 29, 74, 0.5);
+}
+
+/* Fieldset y Legend */
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-top: 1.2rem;
+    padding: 0.8rem 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.4rem;
+}
+
+/* Botones Radio y Checkbox */
+fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.rating label {
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Botón de Envío */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* Estilos para review.html */
+.confirmation-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.confirmation-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.counter-display {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.counter-display strong {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.btn-return {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-return:hover {
+    background-color: var(--secondary-color);
+}
