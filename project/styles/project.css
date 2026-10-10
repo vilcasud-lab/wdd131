@@ -1,0 +1,862 @@
+:root {
+    --primary-color: #617b5c;    /* Verde oliva exacto del modelo */
+    --secondary-color: #FDFBF7;  /* Cream / Off-White */
+    --accent-color: #E69A33;     /* Soft Amber */
+    --text-color: #222222;       /* Warm Charcoal */
+    --card-bg: #FFFFFF;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------
+   1. BARRA SUPERIOR (Top Bar - Franja Verde)
+-------------------------------------------------- */
+.top-bar {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.5rem 2.5rem;
+    font-size: 0.85rem;
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Distribuye contacto a la izq y redes a la der */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.top-bar-contact, 
+.top-bar-social {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Quitar el color azul por defecto de los enlaces */
+.top-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.top-bar a:hover {
+    color: var(--accent-color);
+}
+
+.top-bar i {
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------
+   2. CABECERA Y NAVEGACIÓN (Header / Logo / Nav)
+-------------------------------------------------- */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between; /* Logo a la izq, Menú a la der */
+    align-items: center;
+}
+
+/* Control del tamaño del Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px; /* Ajusta la altura del logo para que no descuadre todo */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Menú de Navegación */
+nav ul#nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary-color);
+}
+
+/* Botón Hamburguesa Móvil (oculto en escritorio) */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* --------------------------------------------------
+   SECCIÓN HERO (Imagen Completa, Natural y Sin Sombras)
+-------------------------------------------------- */
+.hero {
+    position: relative;
+    width: 100%;
+    /* Mantiene el contenedor al tamaño natural de la foto */
+    display: block;
+}
+
+/* 1. Ajuste de la imagen completa en su proporción original */
+.hero picture {
+    display: block;
+    width: 100%;
+}
+
+.hero picture img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción exacta sin recortar nada */
+    display: block;
+    object-fit: contain;
+}
+
+.hero-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column; /* Apila los títulos arriba y el artículo abajo */
+    justify-content: space-between; /* Arriba títulos, abajo/derecha el artículo */
+    align-items: flex-start;
+    box-sizing: border-box;
+    pointer-events: none; 
+}
+/* Permitir interacción en los textos si tienen enlaces */
+.hero-headers, 
+.hero-article {
+    pointer-events: auto;
+}
+
+/* 3. Títulos (Izquierda) */
+.hero-headers {
+    width: 100%;
+    text-align: center;
+    flex: 1 1 40%;
+    color: #ffffff;
+}
+
+.hero-headers h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
+}
+
+.hero-headers h2 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+/* 4. Artículo (Derecha) */
+.hero-article {
+    flex: 1 1 45%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-bottom: 15rem;
+}
+
+/* Buttom_ */
+
+.hero-article p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ffffff;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border-right: 4px solid var(--accent-color, #E69A33);
+}
+
+/* .hero-article {
+    align-self: flex-end;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 1rem; 
+} */
+
+.hero-cta-btn {
+    order: 2; /* Fuerza al botón a estar debajo del texto principal */
+    display: inline-block;
+    background-color: var(--accent-color, #E69A33);
+    color: #ffffff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.hero-cta-btn:hover {
+    background-color: #ffffff;
+    color: var(--primary-color, #617b5c);
+    transform: translateY(-3px);
+}
+
+/* NUEVO Estilo para la Medalla de Agradecimiento Dinámica */
+.cta-badge {
+    order: 3; /* Fuerza a la medalla a estar hasta abajo, debajo del botón */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(30, 30, 30, 0.7); /* Fondo oscuro para que sea legible */
+    color: var(--accent-color, #E69A33);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    pointer-events: none; /* No interfiere con los clics */
+    border: 1px solid rgba(230, 154, 51, 0.3); /* Borde sutil */
+}
+
+/* Ajuste móvil */
+@media (max-width: 850px) {
+    .hero-article {
+        align-items: center; /* Centrado en móviles */
+    }
+}
+
+/* .hero-article p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ffffff;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border-right: 4px solid var(--accent-color, #E69A33);
+}
+
+.hero-cta-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--accent-color, #E69A33);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hero-cta-btn:hover {
+    background-color: #ffffff;
+    color: var(--primary-color, #617b5c);
+    transform: translateY(-3px);
+} */
+
+
+
+
+/* --------------------------------------------------
+   DISEÑO RESPONSIVO (Móviles)
+-------------------------------------------------- */
+@media (max-width: 850px) {
+    .hero-container {
+        position: relative; /* En móviles, el texto pasa abajo si la imagen queda pequeña */
+        background-color: var(--primary-color);
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-headers h1 {
+        font-size: 2rem;
+    }
+
+    .hero-article {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* --------------------------------------------------
+   SECCIÓN HISTORIA (History Section)
+-------------------------------------------------- */
+.history {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2.5rem 2rem;
+    background-color: var(--card-bg, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Introducción (Bulgarian Yogurt) */
+.history-intro {
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid var(--secondary-color, #fdfbf7);
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.history h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color, #3f533d);
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.history p {
+    font-family: var(--font-body);
+    color: var(--text-color, #222222);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo de la leyenda/historia */
+.history-grid h2 {
+    font-size: 1.5rem;
+    color: var(--accent-color, #e69a33); /* Color de acento ámbar */
+    margin-bottom: 1.5rem;
+}
+
+/* Distribuir texto a la izquierda e imagen a la derecha */
+.history-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 partes para texto, 1 parte para la foto */
+    gap: 2rem;
+    align-items: start;
+}
+
+.history-text p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+
+/* Estilos de la imagen e ilustración */
+.history-media {
+    margin: 0;
+    text-align: center;
+    background-color: var(--secondary-color, #fdfbf7);
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.history-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block;
+}
+
+.history-media figcaption {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* --------------------------------------------------
+   RESPONSIVO (Móviles y Tablets)
+-------------------------------------------------- */
+@media (max-width: 850px) {
+    .history {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem auto;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr; /* Apila texto e imagen en 1 sola columna */
+    }
+
+    .history-media {
+        order: -1; /* Muestra la foto arriba del texto en celulares */
+        max-width: 400px;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .history-text p {
+        text-align: left;
+    }
+}
+
+
+/* --------------------------------------------------
+   SECCIÓN: FERMENTATION BASICS (Cards Grid)
+-------------------------------------------------- */
+.basics-section {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.basics-section h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color, #617b5c);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Subrayado decorativo debajo del título */
+.basics-section h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: var(--accent-color, #E69A33);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Grilla para las 2 tarjetas */
+.cards-grid-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Estilo individual de la tarjeta */
+.info-card {
+    background-color: var(--card-bg, #ffffff);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.info-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color, #617b5c);
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+/* Ajuste de imágenes dentro de las tarjetas */
+.info-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    font-family: var(--font-body);
+    color: var(--text-color, #222222);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* --------------------------------------------------
+   ADAPTACIÓN MÓVIL
+-------------------------------------------------- */
+@media (max-width: 600px) {
+    .basics-section {
+        margin: 2rem auto;
+    }
+
+    .info-card img {
+        height: 180px;
+    }
+}
+
+
+/* --------------------------------------------------
+   FOOTER (Pie de página)
+-------------------------------------------------- */
+footer {
+    background-color: var(--primary-color, #617b5c);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--accent-color, #E69A33);
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-family: var(--font-body);
+}
+
+footer #last-modified {
+    color: #f1f8e9;
+    font-weight: 500;
+}
+
+
+
+/* --------------------------------------------------
+   PÁGINA DE REGISTRO (join.html Form Styles)
+-------------------------------------------------- */
+.join-main {
+    max-width: 850px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.join-container {
+    background-color: var(--card-bg, #ffffff);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.join-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.join-header h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color, #617b5c);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.join-header p {
+    font-family: var(--font-body);
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estructura del Formulario */
+form.wf1 fieldset {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.75rem;
+    background-color: var(--secondary-color, #fdfbf7);
+}
+
+form.wf1 legend {
+    font-family: var(--font-heading);
+    color: var(--primary-color, #617b5c);
+    font-weight: 700;
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+form.wf1 label {
+    display: block;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--text-color, #222222);
+    font-size: 0.95rem;
+}
+
+/* Entradas de Texto, Email, Select y Textarea */
+form.wf1 input[type="text"],
+form.wf1 input[type="email"],
+form.wf1 input[type="tel"],
+form.wf1 select,
+form.wf1 textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: var(--text-color, #222222);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Indicador de foco activo */
+form.wf1 input:focus,
+form.wf1 select:focus,
+form.wf1 textarea:focus {
+    outline: none;
+    border-color: var(--primary-color, #617b5c);
+    box-shadow: 0 0 0 3px rgba(97, 123, 92, 0.2);
+}
+
+/* Opciones de Radio */
+.radio-group-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color, #222222);
+}
+
+.radio-options {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+label.inline-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+/* Botón de envío */
+.submit-btn {
+    background-color: var(--accent-color, #E69A33);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn:hover {
+    background-color: #d48722;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptabilidad a dispositivos móviles */
+@media (max-width: 600px) {
+    .join-container {
+        padding: 1.5rem 1rem;
+    }
+
+    form.wf1 fieldset {
+        padding: 1rem;
+    }
+
+    .radio-options {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+
+
+/* --------------------------------------------------
+   PÁGINA ABOUT (about.html)
+-------------------------------------------------- */
+.about-main {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.about-content {
+    background-color: var(--card-bg, #ffffff);
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.about-content > h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color, #617b5c);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 3px solid var(--accent-color, #E69A33);
+    padding-bottom: 1rem;
+}
+
+.about-section {
+    margin-bottom: 2.5rem;
+}
+
+.about-section h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color, #617b5c);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.about-section h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-color, #E69A33);
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.about-section p {
+    font-family: var(--font-body);
+    color: var(--text-color, #222222);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Listas con viñetas limpias */
+ul.clean-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+ul.clean-list li {
+    font-family: var(--font-body);
+    color: var(--text-color, #222222);
+    padding: 0.4rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    line-height: 1.5;
+}
+
+ul.clean-list li i {
+    color: var(--accent-color, #E69A33);
+    margin-top: 0.3rem;
+}
+
+/* Estilos para imágenes principales dentro de about.html */
+.about-media {
+    margin: 1.5rem auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+.about-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-media figcaption {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Distribución en grilla para texto e ilustración lateral */
+.about-grid-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-media-small {
+    flex: 1 1 300px;
+    margin: 0;
+}
+
+.about-media-small img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Sección de Referencias / Bibliografía */
+.bibliography h2 {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.5rem;
+}
+
+.biblio-list {
+    padding-left: 1.5rem;
+}
+
+.biblio-list li {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .about-content > h1 {
+        font-size: 2rem;
+    }
+
+    .about-grid-content {
+        flex-direction: column;
+    }
+}
